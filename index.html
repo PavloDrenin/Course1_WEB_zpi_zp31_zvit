@@ -119,7 +119,151 @@
 
             <div id="div2" class="zmistContent">Зміст 2</div>
             <div id="div3" class="zmistContent">Зміст 3</div>
-            <div id="div4" class="zmistContent">Зміст 4</div>
+            <div id="div4" class="zmistContent">
+                <button class="contentButton" onclick="toggleContent('divy1','content')">Мета роботи</button>
+                <button class="contentButton" onclick="toggleContent('divy2','content')">HTML-код сторінки</button>
+                <button class="contentButton" onclick="toggleContent('divy3','content')">Калькулятор</button>
+                <button class="contentButton" onclick="toggleContent('divy4','content')">Масиви</button>
+                <button class="contentButton" onclick="toggleContent('divy5','content')">Висновки</button>
+            </div>
+            <div id="divy1" class="content">Придбати практичні навички роботи маніпулювання інформаційним
+                вмістом Web-документа засобами мови JavaScript
+            </div>
+            <div id="divy2" class="content">
+                <h2>Javascript</h2>
+                <textarea>
+let a = '';
+let b = '';
+let sign = '';
+let finish = false;
+
+const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'];
+const action = ['+', '-', '/', 'X', '+/-'];
+
+// экран
+const number = document.querySelector('.calc__screen-number');
+const acButton = document.querySelector('.btn_ac');
+const container = document.querySelector('.container');
+
+// очистка экрана
+function clearAll() {
+  a = '';
+  b = '';
+  sign = '';
+  finish = false;
+  number.textContent = 0;
+}
+
+acButton.addEventListener('click', function() {
+  clearAll();
+})
+
+function keyDownHandler(key) {
+  // если нажата 0-9 или .
+  if (digit.includes(key)) {
+    if(b == '' && sign == '') {
+      a+=key;
+      number.textContent = a;
+    }
+    else if(a !== '' && b !== '' && finish) {
+      b = key;
+      finish = false;
+      number.textContent = b;
+    }
+    else {
+      b += key;
+      number.textContent = b;
+    }
+    console.log(a, b, sign);
+    return;
+  }
+
+  // если нажата + - / X % +/-
+  if(action.includes(key)) {
+    sign = key;
+    number.textContent = a + sign;
+    console.log(a, b, sign);
+    return
+  }
+
+  // если нажата =
+  if(key === '=' || key === 'Enter') {
+    if(b === '') b = a;
+    switch (sign) {
+      case '+':
+        a = (+a) + (+b);
+        break;
+      case '-':
+        a = a - b;
+        break;
+      case 'X':
+        a = a * b;
+        break;
+      case '/':
+        if(b === '0') {
+          number.textContent = 'Ошибка';
+          a = '';
+          b = '';
+          sign = '';
+          return;
+        }
+        a = a / b;
+        break;
+      case '%':
+        a = b / 100;
+        break;
+      case '+/-':
+        a = -a;
+        break;
+    }
+    finish = true;
+    number.textContent = a;
+    console.log(a, b, sign);
+  } else if(key === '%') {
+    if(b == '') {
+      a = a / 100;
+      number.textContent = a;
+    } else {
+      b = a * b / 100;
+      number.textContent = b;
+    }
+  }
+}
+
+container.addEventListener('click', function(evt) {
+  // кнопка не нажата
+  if(!evt.target.classList.contains('btn')) return;
+  // нажата кнопка AC
+  if(evt.target.classList.contains('btn_ac')) return;
+
+  keyDownHandler(evt.target.textContent);
+})
+
+document.addEventListener('keydown', function(evt) {
+  console.log(`code=${evt.key}`);
+  if (evt.key === "Escape") {
+    clearAll();
+  }
+  keyDownHandler(evt.key);
+});
+                </textarea>
+            </div>
+            <div id="divy3" class="content">
+                <img src="calc.png" alt="скрін калькулятора">
+            </div>
+            <div id="divy4" class="content">
+                Заданий одновимірний масив А, кількість елементів якого задана користувачем.
+                Побудувати масив В, кожний елемент якого обчислюється за формулою :
+                bі = max*ai де - max це максимальний елемент масиву А. Надрукувати вхідний
+                та вихідний масиви.
+                Виконати сортування вихідного масиву за зменшенням методом вставки
+                Застосувати функції
+            </div>
+            <div id="divy5" class="content">
+                <img src="forms.png" alt="скрін форм">
+            </div>
+
+            </div>
         </div>
     </section>
 
