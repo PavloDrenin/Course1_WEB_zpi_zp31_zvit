@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+        a:link, a:visited {
+            background-color: green;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: #2d9368;
+        }
+
+        table, tr, th, td {
+            border-spacing: 2px;
+            border: 3px solid rgb(200, 200, 200);
+            letter-spacing: 1px;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+        }
+
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+
+        caption {
+            text-align: right;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>myFirstHTML</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body style="background-image: url('02_copia.jpg');
+      background-repeat: repeat;
+        ">
+
+<h1>Приклад першого заголовку</h1>
+<h4>Ще один приклад</h4>
+<a href="#c1">щось про CSS</a>
+<p title="підказка при наведенні">Параграф 1</p>
+<p>Параграф 2</p>
+<a href="https://www.google.com/">посилання на гугл</a>
+<br>
+<img style = "opacity: 0.6;" usemap="#mapImg" src="800.webp" alt="Черепаха та слони рулять світом" width="800" height="376">
+<map name="mapImg">
+    <area shape="poly" coords="187, 150, 231, 76, 291, 24, 354, 9, 422, 25, 494, 66, 537, 145, 368, 127, 192, 154"
+          href="https://www.rbc.ua/rus/styler/z-yavilisya-novi-foto-nashoyi-planeti-kosmosu-1673002563.html">
+</map>
+<br>
+<button>Real button</button>
+<h2>список без нумерації</h2>
+<ul style="list-style-type: square;">
+    <li title="живе у воді">Риба</li>
+    <li title='"смачно" до борщу'>Сало</li>
+    <li title="на природі з 'компанією'">Стейки</li>
+</ul>
+<h2>список нумерований</h2>
+<ol type="I">
+    <li>Інкапсуляція</li>
+    <li>Наслідування</li>
+    <li>Поліморфізм</li>
+</ol>
+<h2 style="font-size:60px;">Заголовок h2 з атрибутом style font-size:60px </h2>
+<h2>Заголовок h2</h2>
+
+<p>Це просто якийсь текст.</p>
+<hr>
+<h3>Це заголовок 3</h3>
+<p>Це якийсь інший текст.</p>
+<hr>
+<pre title="Тарас Григорович Шевченко">
+  Бандуристе, орле сизий, добре тобі, брате, - маєш крила, маєш силу, є коли літати.
+Тепер летиш в Україну, тебе виглядають, полетів би за тобою та хто привітає.
+Я тут чужий, одинокий і на Україні я сирота, мій голубе, як і на чужині.
+Чого ж серце б’ється, рветься? Я й там одинокий. Одинокий, а Україна, а степи широкі.
+
+  Там повіє буйнесенький, як брат заговорить, там в широкім полі воля, там синєє море.
+Виграває, хвалить Бога, тугу розганяє, там могили з буйним вітром в степу розмовляють.
+Розмовляють, сумуючи, отака їх мова: "Було колись, та минулося, не вернеться знову".
+Полетів би та й послухав, заплакав би з ними та ба, доля приборкала між людьми й чужими.
+</pre>
+<pre style="color: green ">
+    Я тут чужий, одинокий і на Україні я сирота, мій голубе, як і на чужині.
+    Чого ж серце б’ється, рветься? Я й там одинокий. Одинокий, а Україна, а степи широкі.
+    Бандуристе, орле сизий, добре тобі, брате, - маєш крила, маєш силу, є коли літати.
+    Тепер летиш в Україну, тебе виглядають, полетів би за тобою...
+    За тобою... За тобою...
+</pre>
+<h1 id="c1">Стилізація HTML за допомогою CSS. Каскадні таблиці стилів</h1>
+<pre>
+CSS розшифровується як Cascading Style Sheets - Каскадна таблиця стилів.
+CSS описує, як HTML елементи мають відображатись на екрані, папері або інших носіях..
+CSS економить багато часу. CSS може контролювати макет кількох веб-сторінок одночасно.
+CSS можна додати до елементів HTML трьома способами:
+<ul>
+    <li>Inline (вбудований або рядковий) - використовуючи атрибут style в HTML елементах</li>
+    <li>(внутрішній) - використовуючи елемент &lt;style&gt; в разділі &lt;head&gt;</li>
+    <li>(зовнішній) - за допомогою зовнішнього файлу CSS</li>
+</ul>
+</pre>
+<table style="width: 50%">
+    <caption>Назва таблиці</caption>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>AGE</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Andriy</td>
+        <td>18</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Vasyil</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Irina</td>
+        <td>19</td>
+    </tr>
+</table>
+<table style="width:100%">
+    <caption>Savings</caption>
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+        <th>Year</th>
+
+    </tr>
+    <tr>
+        <td>January</td>
+        <td rowspan="2">$100</td>
+        <td>2023</td>
+    </tr>
+    <tr>
+        <td>February</td>
+        <!--        <td>$50</td>-->
+        <td>1990</td>
+    </tr>
+</table>
+
+<table class="table2" style="width:60%;">
+    <caption>table 3</caption>
+    <colgroup>
+        <col span="2" style="background-color:rgba(150, 212, 212,0.4)">
+    </colgroup>
+    <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+        <th>FRI</th>
+        <th>SAT</th>
+        <th>SUN</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+    </tr>
+</table>
+<h3>Ще один список</h3>
+<dl>
+    <dt>Кава</dt>
+    <dd>- чорний гарячий напій</dd>
+    <dt>Молоко</dt>
+    <dd>- білий холодний напій</dd>
+</dl>
+
+<h2>Форми</h2>
+<form>
+    Ім’я:<br>
+    <input type='text' name='firstname'><br>
+    Прізвище:<br>
+    <input type='text' name='lastname'>
+</form>
+
+<form>
+    <input type='radio' name='gender' checked> Чоловіча<br>
+    <input type='radio' name='gender'> Жіноча<br>
+</form>
+<h2>Форма з відправкою живого GET запиту</h2>
+<p>про погоду</p>
+<form action='https://api.open-meteo.com/v1/forecast' method='get'>
+    latitude:<br>
+    <input type='text' name='latitude' value='52.52'><br>
+    longitude:<br>
+    <input type='text' name='longitude' value='13.41'><br><br>
+    <input type='submit' value='Відправити'>
+</form>
+</body>
+</html>

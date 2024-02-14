@@ -44,17 +44,77 @@
                 Створити шаблон звітного HTML-документом для відображення
                 результатів роботи всіх лабораторних робіт.
             </div>
-            <div id="divx2" class="content">Змістx 2</div>
-            <div id="divx3" class="content">Змістx 3</div>
-            <div id="divx4" class="content">Змістx 4</div>
-            <div id="divx5" class="content">Змістx 5</div>
+            <div id="divx2" class="content">
+                <textarea>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+        a:link, a:visited {
+            background-color: green;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
 
+        a:hover, a:active {
+            background-color: #2d9368;
+        }
 
+        table, tr, th, td {
+            border-spacing: 2px;
+            border: 3px solid rgb(200, 200, 200);
+            letter-spacing: 1px;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+        }
 
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
 
+        caption {
+            text-align: right;
+        }
 
+    </style>
+    <meta charset="UTF-8">
+    <title>myFirstHTML</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
+<body style="background-image: url('02_copia.jpg');
+      background-repeat: repeat;
+        ">
 
+<h1>Приклад першого заголовку</h1>
+<h4>Ще один приклад</h4>
+<a href="#c1">щось про CSS</a>
+<p title="підказка при наведенні">Параграф 1</p>
+<p>Параграф 2</p>
+<a href="https://www.google.com/">посилання на гугл</a>
+<br>
+<img style = "opacity: 0.6;" usemap="#mapImg" src="800.webp" alt="Черепаха та слони рулять світом" width="800" height="376">
+<map name="mapImg">
+    <area shape="poly" coords="187, 150, 231, 76, 291, 24, 354, 9, 422, 25, 494, 66, 537, 145, 368, 127, 192, 154"
+          href="https://www.rbc.ua/rus/styler/z-yavilisya-novi-foto-nashoyi-planeti-kosmosu-1673002563.html">
+</map>
+<br>
+<button>Real button</button>
+<h2>список без нумерації</h2>
+                </textarea>
+            </div>
+            <div id="divx3" class="content">
+                <img src="img.png" alt="скрін зображень">
+            </div>
+            <div id="divx4" class="content">
+                <img src="table.png" alt="скрін таблиць">
+            </div>
+            <div id="divx5" class="content">
+                <img src="forms.png" alt="скрін форм">
+            </div>
 
 
             <div id="div2" class="zmistContent">Зміст 2</div>
