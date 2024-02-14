@@ -1,12 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<head xmlns="http://www.w3.org/1999/html">
     <meta charset="UTF-8">
     <title>zvit</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
+<header style="color: green">
+    <section>
+        <div style="float: left; width: 85%; ">
+            <h1 style="text-align: center">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+            <p style="font-family: Arial; text-align: justify"> З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ
+                WEB-ЗАСТОСУВАНЬ"
+                Студента групи зпі-зп31 <span style="font-size: x-large">Дреніна Павла Сергійовича</span>
+            </p>
+        </div>
+        <div style="float: right; width: 13%; text-align: right;
+         padding-left: 0px; margin-right: 15px ">
+            <img src="foto_student.jpg" alt="students photo" height="150px">
+        </div>
+    </section>
+</header>
+<!--<br><br><br><br><br>-->
+<main>
+    <section>
+        <div class="laboratornie">
+            <button class="labButton" onclick="toggleContent('div1','zmistContent')">Лабораторна робота 1</button>
+            <button class="labButton" onclick="toggleContent('div2','zmistContent')">Лабораторна робота 2</button>
+            <button class="labButton" onclick="toggleContent('div3','zmistContent')">Лабораторна робота 3</button>
+            <button class="labButton" onclick="toggleContent('div4','zmistContent')">Лабораторна робота 4</button>
+        </div>
+        <div class="zmistLab">
+            <div id="div1" class="zmistContent">
+                <button class="contentButton" onclick="toggleContent('divx1','content')">Мета роботи</button>
+                <button class="contentButton" onclick="toggleContent('divx2','content')">HTML-код сторінки</button>
+                <button class="contentButton" onclick="toggleContent('divx3','content')">Зображення</button>
+                <button class="contentButton" onclick="toggleContent('divx4','content')">Таблиця</button>
+                <button class="contentButton" onclick="toggleContent('divx5','content')">Форма</button>
+            </div>
+            <div id="divx1" class="content">Придбати практичні навички роботи з HTML-документом, таблицями, ,
+                зображеннями, посиланнями, списками, формами
+                Створити шаблон звітного HTML-документом для відображення
+                результатів роботи всіх лабораторних робіт.
+            </div>
+            <div id="divx2" class="content">Змістx 2</div>
+            <div id="divx3" class="content">Змістx 3</div>
+            <div id="divx4" class="content">Змістx 4</div>
+            <div id="divx5" class="content">Змістx 5</div>
+
+
+
+
+
+
+
+
+
+            <div id="div2" class="zmistContent">Зміст 2</div>
+            <div id="div3" class="zmistContent">Зміст 3</div>
+            <div id="div4" class="zmistContent">Зміст 4</div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+
+</footer>
+
+
+<script>
+    // Функція для приховування і показу блоків
+    function toggleContent(targetDiv, content) {
+        // let alllDivs = Array(document.getElementsByClassName('zmistContent'))
+        //                     .concat(Array(document.getElementsByClassName('content')));
+        // console.log(alllDivs)
+        let contentDivs = document.getElementsByClassName('content');
+        let allDivs = document.getElementsByClassName(content);
+        // console.log(allDivs)
+        // console.log(targetDiv)
+        if(targetDiv === 'div4'||'div1'||'div2'||'div3'){
+            for(const divContent of contentDivs){
+                divContent.style.display = "none";
+            }
+        }
+        for (const divZmist of allDivs) {
+            if (divZmist.id === targetDiv) {
+                if (divZmist.style.display === "none" || divZmist.style.display === "" || divZmist.style.display === "block") {
+                    divZmist.style.display = "block";
+                } else {
+                    divZmist.style.display = "none";
+                }
+            } else {
+                divZmist.style.display = "none";
+            }
+        }
+    }
+</script>
 </body>
 </html>

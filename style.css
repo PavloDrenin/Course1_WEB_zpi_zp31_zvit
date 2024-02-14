@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-family: "Arial Narrow";
+}
+header {
+    background: bisque;
+    border: 2px solid rebeccapurple;
+    height: 155px;
+}
+
+.laboratornie {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+    border: 2px solid rebeccapurple;
+    height: 50px;
+}
+.labButton{
+    font-size: larger;
+    width: calc(100%/4);
+}
+
+
+.zmistLab{
+    display: flex;
+    height: border-box;
+    border: 1px solid rebeccapurple;
+}
+.zmistContent {
+    display: none;
+    width: 15%;
+
+}
+.content {
+    display: none;
+    padding: 10px;
+    width: 85%;
+    color: green;
+}
+
+.contentButton{
+    display: flex;
+    width: 100%;
+
+}
+/*#div1 {*/
+/*    display: block;*/
+/*}*/
