@@ -260,7 +260,7 @@ document.addEventListener('keydown', function(evt) {
                 Застосувати функції
             </div>
             <div id="divy5" class="content">
-                <img src="forms.png" alt="скрін форм">
+                Взаємодія з користувачем: JavaScript дозволяє створювати взаємодію на сторінці, таку як обробка подій миші та клавіш, анімації, валідація форм, спливаючі вікна та інші елементи, які роблять веб-сайти більш динамічними і користувацькими. Маніпуляція DOM: JavaScript використовується для доступу до та зміни елементів на веб-сторінці, що дозволяє динамічно змінювати вміст та структуру сторінки під час її взаємодії з користувачем. Асинхронні запити: JavaScript дозволяє виконувати асинхронні запити на сервер, що дозволяє обмінюватися даними між клієнтом та сервером без перезавантаження сторінки. Це використовується, наприклад, для завантаження даних без оновлення всієї сторінки.
             </div>
 
             </div>
@@ -282,13 +282,14 @@ document.addEventListener('keydown', function(evt) {
         // console.log(alllDivs)
         let contentDivs = document.getElementsByClassName('content');
         let allDivs = document.getElementsByClassName(content);
-        // console.log(allDivs)
+        console.log(allDivs)
         // console.log(targetDiv)
         if(targetDiv === 'div4'||'div1'||'div2'||'div3'){
             for(const divContent of contentDivs){
                 divContent.style.display = "none";
             }
         }
+
         for (const divZmist of allDivs) {
             if (divZmist.id === targetDiv) {
                 if (divZmist.style.display === "none" || divZmist.style.display === "" || divZmist.style.display === "block") {
